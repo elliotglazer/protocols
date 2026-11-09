@@ -1,12 +1,12 @@
 # Mathematical research protocols
 
-Six review frameworks for mathematical research repositories, with different labor and assurance requirements. Choose one at the start of a project and state it in the project brief. A higher letter requires stronger evidence, but does not give a numerical guarantee that the mathematics is correct.
+These six frameworks specify the evidence a mathematical research repository should contain before reporting a result as verified. They cover proofs, cited theorems, computational constructions, audit findings, and reproducible releases. The requirements range from documented checks by the author to a complete machine-checked formal proof.
 
-**Protocol_D is the original Mathematical Research Review Protocol version 1.4, preserved byte for byte.** Protocols A, B and C provide lighter review processes. Protocols E and F use formal proof for progressively more of the dependency chain.
+Choose a framework at the start of a project and record it in the supplied project brief. A through D use informal mathematical review, with increasing requirements for independent scrutiny and evidence. E and F require formal proofs. Each framework has a self-contained starter kit with operating instructions and record templates. None guarantees that the intended mathematical claim is correct merely because a checklist is complete.
 
 ## Comparison
 
-The baseline, Protocol 0, is the original plan: use published external theorems, check their hypotheses and conventions, give explicit constructions and computations, and check the argument as its author. It is a comparison baseline, not a seventh kit.
+Protocol 0 is the reference workload for the cost estimates: an author completes a proof, uses published external theorems with checked hypotheses and conventions, and supplies explicit constructions and computations. It is a comparison baseline, not a seventh kit.
 
 | Framework | Required evidence | Estimated labor relative to Protocol 0 | Principal residual risk |
 | --- | --- | --- | --- |
@@ -14,15 +14,17 @@ The baseline, Protocol 0, is the original plan: use published external theorems,
 | [Protocol_A](Protocol_A.md) | Tracked verification: source and application inventory, findings ledger, reproducible computation checks, versioned evidence | 1.2–1.7× | An author's inventory or reasoning may be incomplete; independent mathematical review is not required |
 | [Protocol_B](Protocol_B.md) | A's evidence plus independent targeted review of novel or fragile arguments, exceptional cases, and essential checkers | 1.5–2.5× | Unselected arguments and interfaces may contain errors; the review plan may miss a fragile step |
 | [Protocol_C](Protocol_C.md) | Complete independent mathematical review, including substantive theorem applications, connecting arguments, computations, and final assembly | 2–4× | Reviewers can share misconceptions or miss an implicit dependency; no separate source-first inventory reconstruction is required |
-| [Protocol_D](Protocol_D.md) | Exact Protocol 1.4: complete review, independent source-first reconstruction and reconciliation, explicit coverage decisions, related-use checks, and synchronized releases | 3–6× | Informal reasoning can still fail; a carefully inventoried application can still be wrong; published inputs remain trusted |
+| [Protocol_D](Protocol_D.md) | Complete independent review plus a separate reconstruction of the proof's dependencies, reconciliation with the author's inventory, explicit coverage decisions, checks for repeated failure patterns, and synchronized releases | 3–6× | Informal reasoning can still fail; a carefully inventoried application can still be wrong; published inputs remain trusted |
 | [Protocol_E](Protocol_E.md) | Formal proof of all project arguments relative to an explicit, audited list of published-theorem assumptions; independently checked statement fidelity and formal dependency closure | 8–30× | Imported theorem assumptions, their translation, target specification, and the declared formal verification system |
 | [Protocol_F](Protocol_F.md) | Full formal dependency closure to declared foundational axioms, including verified computational certificates, with independent specification review | 20–100× or more | Specification errors and defects in the declared kernel, foundational assumptions, or build and checking environment |
 
-These are speculative planning ranges for future projects of comparable depth and complexity. They are not measurements of this project's history or reliable forecasts for every subject. They estimate total labor from a serious candidate argument through proof completion, verification and a reproducible release, assuming an efficient implementation. Initial discovery, unexpected new mathematics, inaccessible sources, and missing formal libraries can dominate the cost. The ranges overlap deliberately. Parallel workers may reduce elapsed time without reducing total labor.
+These are speculative planning ranges for substantial projects combining specialized theorem inputs, new arguments and nontrivial computations. They are not benchmark measurements or reliable forecasts for every subject. They estimate total labor from a serious candidate argument through proof completion, verification and a reproducible release, assuming an efficient implementation. Initial discovery, unexpected new mathematics, inaccessible sources, and missing formal libraries can dominate the cost. The ranges overlap deliberately. Parallel workers may reduce elapsed time without reducing total labor.
 
 No calibrated percentages for the risk of an incorrect result are available. The table describes which failure modes each process attempts to detect and which it still tolerates. Every framework requires a valid argument for its stated claim and the resolution of known substantive gaps before declaring completion. A lighter framework accepts less evidence against **undetected** errors, not permission to ignore a known defect.
 
-The former selective-formalization tier E has been removed. The former F and G tiers are now E and F. Protocol_D retains the version number 1.4 inside its original text; the letters select frameworks, not successive revisions of that text. E and F replace duplicated manual internal-dependency bookkeeping with inspected formal dependency evidence. They do not claim that a compiler run satisfies all of D's separate documentary requirements.
+The main difference between C and D is how completeness is checked. Under C, reviewers use the author's inventory while examining the entire argument. Under D, a reviewer first reconstructs the required inputs from the proof itself, then compares that reconstruction with the inventory. This extra check is intended to expose omitted dependencies and unsupported connecting steps.
+
+E and F change the kind of evidence. E requires a formal derivation of the project's results while treating an explicit, independently audited list of published theorems as assumptions. F requires formal proofs of those dependencies too, down to declared foundational axioms. Both still require review of whether the formal statements express the intended mathematics. They use formal dependency evidence instead of duplicating every internal inference in a manual inventory.
 
 ## Download a starter kit
 
@@ -57,7 +59,7 @@ Every companion is specific to its framework. For example, A does not require a 
 
 ## Maintenance and provenance
 
-[PROVENANCE.md](PROVENANCE.md) identifies the unchanged version 1.4 source and the origins of the variants. The companion files are templates, not completed audit evidence. The repository's checks validate packaging, file identity and local links; they do not review a mathematical proof.
+[PROVENANCE.md](PROVENANCE.md) records document versions and source provenance. The companion files are templates, not completed audit evidence. The repository's checks validate packaging, file identity and local links; they do not review a mathematical proof.
 
 With Python 3.10 or later, no third-party packages are needed:
 
