@@ -4,6 +4,14 @@ These six frameworks specify the evidence a mathematical research repository sho
 
 Choose a framework at the start of a project and record it in the supplied project brief. A through D use informal mathematical review, with increasing requirements for independent scrutiny and evidence. E and F require formal proofs. Each framework has a self-contained starter kit with operating instructions and record templates. None guarantees that the intended mathematical claim is correct merely because a checklist is complete.
 
+## Roles: people and AI agents
+
+In these protocols, **author** means the producer of the particular argument, construction, or code being reviewed. An author can be a human, an AI agent, or a collaboration. It is a task-specific review role, not a designation of authorship on a published paper.
+
+A **reviewer** examines that contribution. When non-author review is required, its acceptance must come from someone or an agent that did not produce that contribution. A separate AI agent may fill this role; another human operator or GitHub account is not automatically required. Renaming the same agent or asking it to repeat its own check does not make the review independent. Record shared context, prior exposure and any repair the reviewer contributes. Distinct agents can still make correlated mistakes.
+
+The **project owner** sets the objective, selects the framework and authorizes publication. The **integrator** combines accepted contributions and checks their compatibility. A person or agent may fill different roles on different contributions, subject to the chosen protocol's independence requirements. Publication credit is decided separately.
+
 ## Comparison
 
 Protocol 0 is the reference workload for the cost estimates: an author completes a proof, uses published external theorems with checked hypotheses and conventions, and supplies explicit constructions and computations. It is a comparison baseline, not a seventh kit.
