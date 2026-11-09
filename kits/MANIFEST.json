@@ -1,0 +1,42 @@
+{
+  "hash_algorithm": "SHA-256",
+  "kits": {
+    "Protocol_A": {
+      "bytes": 9161,
+      "path": "kits/Protocol_A.zip",
+      "protocol_sha256": "7026d840d00f58c93c3695574b73283daee2fc8176e94ddcc37adc2151685336",
+      "sha256": "02502e2f6aff60fced581696f52ee08b83536f912a1a99f5ff1c2910a66c9c7b"
+    },
+    "Protocol_B": {
+      "bytes": 9353,
+      "path": "kits/Protocol_B.zip",
+      "protocol_sha256": "17bd1e9f8d5e1ac216105beaadfe91e6c7f685b8e6bd8de6ff0406825c43e17e",
+      "sha256": "4f473b5f365ab085c2ecb95445b64e761647c6523e8a9a4ea0d486658e8fd156"
+    },
+    "Protocol_C": {
+      "bytes": 9851,
+      "path": "kits/Protocol_C.zip",
+      "protocol_sha256": "2f285e0b7f9e14a03122fb4aa46e1f3d64e9a8af176a13f5d17ff3d916a5f2cb",
+      "sha256": "f661152a2516ea22dc0582ac4cf23f14e2437eaa4316da8e477e852fcbf244de"
+    },
+    "Protocol_D": {
+      "bytes": 26219,
+      "path": "kits/Protocol_D.zip",
+      "protocol_sha256": "3d16c4d58d030ff745460386b081eb21c8c0d3f375cbfb06c4f9777c235a12f9",
+      "sha256": "397e4dc09cd56791ea6930c86ae3236d15413356407114bc96e38090757150ef"
+    },
+    "Protocol_E": {
+      "bytes": 10383,
+      "path": "kits/Protocol_E.zip",
+      "protocol_sha256": "a6935609c68ae3e899e735fd7dd8e4cac2115c50805d168079ae9842a4d4a3d7",
+      "sha256": "802f79cd383b4fa39c1b8530c701991c3e791b3237f859ff65f710826cbaa3a8"
+    },
+    "Protocol_F": {
+      "bytes": 10117,
+      "path": "kits/Protocol_F.zip",
+      "protocol_sha256": "f4d598b8ddd0d868b454d2f9222573177fd5d48f60de1d00c22f360d828ac94c",
+      "sha256": "1ddbf7b5e6d615552df1b196ec6100928d4de74827471912dcde22462bf0585b"
+    }
+  },
+  "schema": 1
+}
