@@ -10,7 +10,7 @@ The authoritative source file and [Protocol_D.md](Protocol_D.md) have the same S
 3d16c4d58d030ff745460386b081eb21c8c0d3f375cbfb06c4f9777c235a12f9
 ```
 
-The original title, version line, contents and line endings are preserved. The name Protocol_D selects that text without rewriting it. Its [agent companion](companions/Protocol_D/AGENTS.md) is also copied unchanged from the existing version 1.4 starter kit. The other companion templates are adapted for this collection.
+The original title, version line, contents and line endings are preserved. The name Protocol_D selects that text without rewriting it. Its [agent companion](companions/Protocol_D/AGENTS.md) was initially copied unchanged from the existing version 1.4 starter kit. The other companion templates were adapted for this collection. The November 10, 2026 companion revision adds release planning, preflight and recovery instructions to all six kits and corresponding README guidance. It changes no protocol text or assurance level.
 
 ## Variants and companions
 

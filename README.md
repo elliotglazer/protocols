@@ -65,6 +65,12 @@ Suggested starting instruction:
 
 Every companion is specific to its framework. For example, A does not require a non-author coverage review, and B does not silently require a full D audit. All six preserve explicit computations, findings, provenance and cumulative handoffs.
 
+## Release workflow
+
+The companion operating instructions include a practical release plan: immutable commit and artifact bindings, an end-to-end preflight, compatibility with existing signed evidence when used, and resumable stages that preserve successful unchanged work. The project brief records the phase budgets, progress and error locations, recovery owner, and publication/readback steps.
+
+After two unexplained infrastructure failures in a stage, diagnose and reproduce the failing step before another expensive full run while independent work continues. Publication should be a short delivery step after expensive validation. Changed relevant inputs or checkers still require the affected checks to run again. These instructions do not add mathematical assurance duties, extra human signoffs, permissions or a custom service to the selected framework.
+
 ## Maintenance and provenance
 
 [PROVENANCE.md](PROVENANCE.md) records document versions and source provenance. The companion files are templates, not completed audit evidence. The repository's checks validate packaging, file identity and local links; they do not review a mathematical proof.

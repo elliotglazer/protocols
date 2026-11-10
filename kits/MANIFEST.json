@@ -2,40 +2,40 @@
   "hash_algorithm": "SHA-256",
   "kits": {
     "Protocol_A": {
-      "bytes": 9544,
+      "bytes": 11140,
       "path": "kits/Protocol_A.zip",
       "protocol_sha256": "7026d840d00f58c93c3695574b73283daee2fc8176e94ddcc37adc2151685336",
-      "sha256": "6d1adde44bc15191bf2da6b91104f2d84d6a3bf6340b87b1729b27dc398984c0"
+      "sha256": "9c52e21edd47323b7400b83487a069e5924ec06d5dac44a713cdaff5b100a449"
     },
     "Protocol_B": {
-      "bytes": 9733,
+      "bytes": 11337,
       "path": "kits/Protocol_B.zip",
       "protocol_sha256": "17bd1e9f8d5e1ac216105beaadfe91e6c7f685b8e6bd8de6ff0406825c43e17e",
-      "sha256": "af26f48c615bf600c399c1673e54d77d434331cfdbde79bb9df3b34468263a18"
+      "sha256": "9575f794adcd6a3b9aab423b588e6ed0fa1e34648d267d4832ca1ed50d2fe21a"
     },
     "Protocol_C": {
-      "bytes": 10225,
+      "bytes": 11821,
       "path": "kits/Protocol_C.zip",
       "protocol_sha256": "2f285e0b7f9e14a03122fb4aa46e1f3d64e9a8af176a13f5d17ff3d916a5f2cb",
-      "sha256": "5336a72f02502ee0f4fcc309710f4053a05404f58ccc88dfc6f043cf57ecfc1d"
+      "sha256": "c1d1ca6a17f3f5eba134bb49600916d319183fa2b0580ea6cfdbf47f0416f8b9"
     },
     "Protocol_D": {
-      "bytes": 26609,
+      "bytes": 28123,
       "path": "kits/Protocol_D.zip",
       "protocol_sha256": "3d16c4d58d030ff745460386b081eb21c8c0d3f375cbfb06c4f9777c235a12f9",
-      "sha256": "3664449fc35c6ff804c2add0de7d6d7e2638708775750290777828d4bf38348e"
+      "sha256": "1045d8973456a19c00d4901dd2f58f46d8dbac9a3cbed9004ac85eaabba62edd"
     },
     "Protocol_E": {
-      "bytes": 10773,
+      "bytes": 12374,
       "path": "kits/Protocol_E.zip",
       "protocol_sha256": "a6935609c68ae3e899e735fd7dd8e4cac2115c50805d168079ae9842a4d4a3d7",
-      "sha256": "042c67deba3f9d6caadc0ccf9a43ba6a0511b2dd8bf28b432957e606901d45f7"
+      "sha256": "c586fc36c23c1c4e2b0fe8b91d4ac524c9cbc20bdfb5eaa757410027480bbbc3"
     },
     "Protocol_F": {
-      "bytes": 10506,
+      "bytes": 12108,
       "path": "kits/Protocol_F.zip",
       "protocol_sha256": "f4d598b8ddd0d868b454d2f9222573177fd5d48f60de1d00c22f360d828ac94c",
-      "sha256": "364144011c7edd9b308dbbb11e9bb460d6087e3815c951a7ca6caa4bbfe0a3cf"
+      "sha256": "ea4dbcca1defeb8a6ab38eb419274f9c9b88002a7e84eb695ec8096d4db211bf"
     }
   },
   "schema": 1

@@ -54,6 +54,14 @@ Do not downgrade or expand the framework silently. A departure must remain visib
 - Public/private destination differences and required readback:
 - Required links and checks:
 
+## Minimal release plan
+
+- Immutable candidate commit and artifact manifest; derived hosting metadata checked separately:
+- Ordered stages, commands, dependencies, owners and saved success records; exact inputs and checker/configuration versions that permit reuse:
+- End-to-end preflight, existing signed-evidence compatibility if applicable, failure/retry cases, and live-only checks still pending:
+- Measured or estimated time, compute and storage budget per phase; progress/error reporting location and recovery owner:
+- Short publication and readback steps under existing authorization; safe resume point after partial publication:
+
 ## Resources and existing authorization
 
 - Time, compute, memory and concurrency constraints:
