@@ -1,4 +1,4 @@
 * text=auto eol=lf
-Protocol_D.md -text
-companions/Protocol_D/AGENTS.md -text
+edition1/Protocol_D.md -text
+edition1/companions/Protocol_D/AGENTS.md -text
 *.zip binary
