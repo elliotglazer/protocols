@@ -1,63 +1,124 @@
-# Protocol_B: targeted independent review
+# Protocol_B: automated cross-family audit
 
-Framework edition 1 | November 9, 2026
+Framework edition 2 | November 13, 2026
 
 ## Completion standard
 
-Produce an explicit proof supported by published theorem inputs, checked applications, reproducible computations and a complete author-maintained inventory. Add non-author review of the parts most likely to fail. This framework requires a justified review selection and completion of that selection, not independent review of every line of the argument.
+Protocol_B is Protocol_A plus an automated review gate in which models from a different family than the author examine the load-bearing steps.
 
-An unconditional completion claim requires the resolution of every known substantive gap and required source check. A conditional result must state its additional premises. Record which parts received author review only so that targeted review cannot be mistaken for complete independent verification.
+Produce an explicit mathematical argument whose external inputs are identified published theorems with checked applications, whose constructions and computations are explicit and reproducible, and whose load-bearing steps have been examined by a reviewer outside the author's own model family or by a human expert. The standard is informal review modulo published theorems. It is neither a formal proof nor a guarantee against error.
 
-## Specify the project and sources
+Every claim carries one of three states, and they are never merged in a report, title or abstract:
 
-Record the exact targets, quantifiers, objects, bounds, representations, deliverables, publication destinations and authorizations in `PROJECT.md`. Maintain stable identifiers and one authoritative ledger for claims, dependencies, source applications, computations, findings, reviews and releases.
+- **Argued.** The author has written and checked the argument.
+- **Same-family reviewed.** A separate agent of the same model family as the author has accepted it.
+- **Outside reviewed.** A human with relevant expertise, or a model from a different family, has accepted it after reading the manuscript and primary sources.
 
-For every substantive external input, record its exact statement, publication, edition or revision, theorem location, source file identity, relevant definitions and corrections. Check the final published statement and its applicability. Unavailable source comparisons remain open. Unpublished assertions must be proved in the project's reviewed arguments or made explicit assumptions of a conditional claim.
+A title, abstract or release note may not use a stronger word than the weakest state of any load-bearing step. An unresolved premise must appear in the stated result as a condition.
 
-Do not routinely reprove published literature. Read source proofs when needed to settle ambiguity or investigate a concrete concern. A known objection to a necessary source cannot be dismissed by noting its publication status.
+## Fix the target and trust boundary
 
-The author inventories and checks every substantive application, including uncited inputs. State what the supplier provides, what the consumer needs and the connecting argument. Compare hypotheses, quantifiers, domain, constructed objects, maps, signs, coefficients, normalizations, local conditions, exceptional cases, uniformity, limit order and simultaneous choices as relevant. Group repeated uses only with all locations and a justification covering them.
+Record the target statements, objects, quantifiers, parameter ranges, bounds and representations in `PROJECT.md`, together with any deliberate conditions.
 
-## Select independent reviews before closure
+Published theorems are trusted after their application is checked: the exact statement in the final published version, its hypotheses, definitions, conventions, corrections, and the match to what the proof needs. A preprint or another agent's assertion is not a published theorem; prove such an input in the project or state the result as conditional on it.
 
-The author proposes a review plan identifying novel arguments, delicate applications, mathematical interfaces, exceptional cases, disputed inputs and computational checkers essential to the result. Include every known substantive repair. Give reasons for selecting each unit and for leaving other units at author-review level.
+Do not re-prove published literature without the project owner's explicit decision. If a concrete objection is raised against a needed source, first establish whether another published result supplies the same statement. Bring the question to the owner with an estimated cost before starting any reconstruction.
 
-A non-author reviewer checks that plan against the target claims and proof structure. The reviewer may expand the selection. Their acceptance assesses the adequacy of targeted coverage; it does not claim exhaustive dependency reconstruction. Update the plan after changes that introduce new risks.
+## Keep one inventory
 
-At minimum, independently review:
+Use one ledger for claims, source applications, computations, findings and releases, with stable identifiers. Record every substantive external input, including uncited standard facts.
 
-- Every new argument central to the claimed advance and each nontrivial transition on which that argument depends.
-- Every application with a delicate source hypothesis, changed normalization, exceptional parameter, integrality issue, limit interchange or simultaneous witness requirement.
-- Every substantive mathematical repair and rebuttal to a received objection.
-- Every essential custom checker's specification, justification and connection to the mathematical assertion; review a trusted standard tool's intended use and relevant limitations.
-- The composition of the selected results into the announced conclusion, without representing this as review of the unselected internal proofs.
+For each application state what the source supplies, what the proof needs, and why they match. Check hypotheses, domains and index sets, the objects and maps actually used, coefficient rings and normalizations, signs and duals, local conditions, exceptional cases, uniformity and limit order, as far as each is relevant. Write the reasoning once, in the manuscript or a linked argument. Do not fill a form with one entry per check.
 
-If practically all arguments meet these criteria, the selection may approach full independent review. Do not exclude a fragile argument just to fit a labor estimate.
+Group repeated uses only when one justification covers them, and list the consuming locations.
 
-## Conduct and record reviews
+## Outside audit of load-bearing steps
 
-A reviewer must not independently accept their own argument. Record identity, human or model status, task, available sources, previous exposure, reviewed versions and actual scope. A separate agent can provide non-author review but may share the author's mistakes. Multiple favorable responses do not prove independence of reasoning.
+Before the first release, list the load-bearing steps and why each was chosen. The list must include:
 
-Reviewers read the selected proof and primary sources and reconstruct its inference. Earlier reports can locate evidence but cannot replace that reconstruction. Distinguish a checked derivation from a consistency check. If a reviewer authors a substantive repair, another reviewer must accept the repair.
+- Every application of a deep external theorem, and every step that changes its normalization, index set, or range of validity.
+- Every argument that is new to this project and central to the result.
+- Every exceptional case, limit interchange and simultaneous choice of witnesses.
+- Every substantive repair and every rebuttal of a received objection.
+- The assembly of the final result from its parts.
 
-Bind decisions to the exact statements, definitions, proofs, relevant source versions and consuming context. Record accepted, changes required, incomplete review or rejected, with reasons and limits. Reuse prior accepted work when that whole contract is unchanged. For changes, review the affected units and consumers; do not repeat an unrelated audit.
+Give the outside reviewer the manuscript and the primary sources, not the author's summaries or earlier verdicts. The reviewer may add steps to the list. Record who reviewed what, at which commit, and what they concluded.
 
-## Explicit computation and objection handling
+Same-family review is useful for catching slips before outside review. It does not count toward the outside-reviewed state, however many agents agree.
 
-Give unambiguous definitions, parameters, algorithms and representations for every construction, and prove required existence or termination. Label a full expansion, symbolic formula, generator and sample differently.
+If no outside reviewer is available for a step, say so in the release and leave the step at its actual state.
 
-Preserve computational specifications, inputs, code or certificates, tool versions, commands, results and hashes. Explain why the checker establishes the consumed claim. Separate search and checking where practical, include meaningful corrupted-input tests, and reproduce essential checks from the release files. Numerical evidence alone cannot discharge an exact universal assertion.
+## Findings
 
-Record every received substantive audit objection and its affected versions. Find and evaluate relevant earlier evidence. Record a reasoned rebuttal or repair, its non-author decision, affected consumers and incorporation into the manuscript. Correct related current assertions in the identified affected scope. Preserve historical evidence and explicit limitations. No response or repeated reassurance closes a finding.
+Register every substantive objection from any human or model: the claim questioned, the version, the evidence considered and the resolution.
 
-## Final assembly and release
+- Before describing a gap as new or serious, read the existing record for that step.
+- Track separately whether a justification exists and whether it is in the manuscript.
+- A finding is closed only when the manuscript contains the argument at the point of use and the repair has been reviewed by someone other than its author. A repair to a load-bearing step needs outside review.
+- After a real failure, write down the mechanism and search the proof for other uses of the same reasoning. Record the scope searched and what was found.
 
-The author checks the entire assembled proof. A non-author reviewer confirms that the selected independent reviews are current, their conclusions compose as claimed, and known objections have accepted dispositions. Explicitly list author-only proof regions; this final check does not silently upgrade them to independently reviewed.
+## Constructions and computations
 
-After substantive changes, repeat only the necessary application, review-plan and composition checks. Stop when the target argument is complete, all required selected reviews pass, essential computations reproduce, and no known necessary premise or source check remains unresolved.
+Define every constructed object unambiguously and prove required existence and termination. Label each artifact as a full expansion, a symbolic expression, a generator or a certificate.
 
-For each research release, synchronize the manuscript and supplied PDF, README, inventories, findings, artifact catalog and cumulative handoff. Include relevant derivations, attempts, negative results, provenance, reviews and corrections with their status. Exclude transcripts, credentials and unrelated private data; record access restrictions and missing evidence. Publish only material authorized for that destination.
+For each essential computation keep the specification, inputs, code or certificate, tool versions, command, output and hashes, and explain why the check establishes the assertion the proof uses. Separate search from checking where feasible, and test an essential checker on deliberately invalid data. Reproduce essential checks from the release files.
 
-The release manifest identifies version, date, source revision, artifact hashes, build and reproduction commands, review scope and open limitations. Preserve prior releases, check links and read back authorized destinations. A non-release edit may defer a handoff rebuild with a recorded reason.
+A passing build or CI run means the computations and files reproduce. Say that, and nothing more.
 
-Report completion as **Protocol_B targeted independent review**, naming the reviewed and author-only scopes. Passing repository checks establishes only the properties those checks implement.
+## Changes
+
+Classify each change and do only what its class requires.
+
+| Class | Examples | Required |
+|---|---|---|
+| Editorial | Typos, wording, navigation, README, credits | Author states that no mathematical content changed. No review. |
+| Local mathematical | A repaired lemma, a corrected constant, a tightened bound | Review the changed unit and its consumers. Outside review if the unit is load-bearing. |
+| New result or route | A new record, a replaced argument, a new external dependency | Inventory update, load-bearing list update, outside audit of the new steps, assembled-proof review. |
+
+A review is bound to a commit and to the files of the unit it examined. Do not bind reviews to the README, CI configuration or any other shared file, and do not use passage-level hashes. A review stays valid until the unit, its dependencies or its consumers change mathematically.
+
+No custom review service, signing scheme or record validator is required. Ordinary CI that builds the manuscript and reruns the computations is enough.
+
+Changes to this protocol take effect at the next release, never during one.
+
+## Automated enforcement
+
+The protocol is designed to run without a human in the loop. The gate performs the outside review itself; it does not verify a record of a review done elsewhere, so there is nothing to sign or attest.
+
+- **Reviewers run in the repository's own CI.** A required check, defined on the default branch so a pull request cannot alter it, sends the change, the manuscript and the available sources to reviewer models and reports their decision on the exact head commit. Credentials are repository secrets. No separate service, local host or owner account is involved.
+- **Two families, always.** Run reviewers from at least two different model families on every mathematical change. Whatever produced the change, at least one reviewer is outside its family, so the author's family never has to be declared or trusted.
+- **Change class is decided by rule.** Paths and a diff check decide whether a change is editorial, local or a new result. Anything that touches mathematical content in a manuscript, a construction or a checker is treated as mathematical. When in doubt, the stricter class applies.
+- **The pull request is data.** Reviewer instructions come from the default branch. Text in the change that addresses the reviewer is reported as a finding, never followed. The review job reads the change and does not execute its code with credentials present.
+- **Findings persist across runs.** Each reviewer receives the findings from earlier runs on the same pull request and must confirm each is resolved. A rerun cannot discard an earlier objection.
+- **Disagreement stays red.** The check passes only when every reviewer accepts. If an author's rebuttal does not persuade the reviewer who raised a finding, the change does not merge; record the deadlock in the findings ledger. The pull request stays blocked until a repository collaborator decides how to proceed: withdraw or narrow the change, request a further repair, or override the finding. An override is recorded with the collaborator's name and reason, and the affected step is reported as not outside reviewed. This is the only point at which the protocol calls on a person.
+- **Merge is automatic** once the reviewer check and the computation checks pass.
+
+Record each reviewer's model, version, instructions, inputs and full report with the check. Agreement between two model families is stronger evidence than agreement within one, and weaker than review by an expert. Report it as what it is.
+
+A step is **outside reviewed** when a reviewer from a family other than its author's has accepted it through this gate, or when a human expert has.
+
+## Milestone checks
+
+Do these once before the first public release, and again only after a change of proof route:
+
+- **Blind dependency reconstruction.** A non-author reviewer reads the proof and lists the inputs it uses before seeing the inventory, then the two lists are compared and differences resolved.
+- **Assembled-proof review.** A non-author reviewer follows every announced claim through its suppliers and checks that the parts use the same objects and conventions.
+
+## Release
+
+A release is a tagged commit containing the manuscript in TeX and PDF, the inventory, the findings ledger, the load-bearing list with review states, and commands that reproduce the computations. Each release that changes the state-of-the-art result increments the version number and includes a complete manuscript, not a note against an earlier one.
+
+A cumulative research handoff is optional and belongs at milestones, not at every release. Keep bulk review output out of the main tree.
+
+Report completion as **Protocol_B automated cross-family audit**, and list the load-bearing steps with their states. Name any step that is not outside reviewed.
+
+## Operating rules for agents
+
+- Report three things separately: open mathematical questions, accepted arguments not yet in the manuscript, and release work.
+- Enumerate the work before quoting a percentage, and keep item numbers stable between reports.
+- Give a time estimate only from measured durations; otherwise say "unknown" and name the current stage.
+- Keep workers assigned and restart them without being asked. Report idle capacity.
+- When a new request arrives during a release, state what it will delay and by how much before starting it.
+- Run the full release path locally at real size before using any hosted check, and record every external failure in full.
+- Record the labor each release took: agent-hours, tokens and elapsed time, split into mathematics, review and release work.
+- Stop when the completion standard is met. Further rounds need a changed input or a concrete question.

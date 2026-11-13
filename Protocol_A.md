@@ -1,6 +1,6 @@
 # Protocol_A: tracked verification
 
-Framework edition 1 | November 9, 2026
+Framework edition 2 | November 13, 2026
 
 ## Completion standard
 
@@ -46,8 +46,8 @@ Bind evidence to file hashes or immutable revisions. After changes, recheck the 
 
 The author checks the assembled proof after the last substantive repair. Confirm that every announced claim has a supporting argument, every necessary external input is qualified, essential computations pass, and no known required mathematical or source check remains open. Correct every current occurrence of a rejected assertion within the affected scope.
 
-Synchronize the manuscript and PDF if supplied, README, source and application inventory, findings ledger, artifact catalog and cumulative research handoff. The handoff preserves relevant derivations, attempts, negative results, reviews and corrections, with provenance and current status. Exclude conversations, credentials and unrelated private material. Record restricted or unavailable evidence and its effect on verification. Do not redistribute source material without authority.
+A release is a tagged commit containing the manuscript in TeX and PDF, the inventory, the findings ledger, and commands that reproduce the computations. Record the version, date, review scope and remaining limitations. Each release that changes the main result increments the version number and includes a complete manuscript, not a note against an earlier one.
 
-Record the release version, date, source revision, artifact hashes, build and reproduction commands, review scope and remaining limitations. Archive prior releases. Check links and read back each authorized publication destination. A small non-release change may defer the archive rebuild with an explicit scope explanation.
+A cumulative research handoff is optional and belongs at milestones, not at every release. Exclude conversations, credentials and unrelated private material, and do not redistribute source material without authority.
 
 Report completion as **Protocol_A tracked author verification**. Identify any additional review separately and at its actual scope. No schema check, successful build or favorable agent response proves mathematical correctness.
